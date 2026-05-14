@@ -5,12 +5,12 @@ function same(arr1, arr2) {
     return false;
   }
   for (let i = 0; i < arr1.length; i++) {
-    let correctIndex = arr2.indexOf(arr1[i] ** 2);
+    //* --> Outer
+    let correctIndex = arr2.indexOf(arr1[i] ** 2); //* Time Complexity - O(n)  --> inner
     if (correctIndex === -1) {
       return false;
     }
-    arr2.splice(correctIndex, 1);
+    arr2.splice(correctIndex, 1); //* Time Complexity - O(n)   --> inner
   }
   return true;
 }
-
