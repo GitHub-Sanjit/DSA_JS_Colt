@@ -1,7 +1,6 @@
-function countDown2(num) {
-  for (let i = num; i > 0; i--) {
-    console.log(i);
-  }
-  console.log("All Done!");
+function sumRange(num){
+   if(num === 1) return 1; 
+   return num + sumRange(num-1);
 }
-countDown2(5)
+
+console.log(sumRange(4))
